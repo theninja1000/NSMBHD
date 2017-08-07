@@ -162,7 +162,7 @@ if($loguserid )
 		{
 			//Check for last post the user posted.
 			$lastPost = Fetch(Query("SELECT id,uid,text FROM {usercomments} 
-				WHERE uid={0} ORDER BY date DESC LIMIT 1", $loguserid));
+				WHERE uid={0} ORDER BY date DESC LIMIT 1", $loguser));
 			$commentField = __("Please wait 30 seconds before posting another comment.");
 		}
 	}
