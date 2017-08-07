@@ -112,7 +112,7 @@ else
 		{
 			//Check for last post the user posted.
 			$lastPost = Fetch(Query("SELECT id,userfrom,ip FROM {pmsgs} p LEFT JOIN {pmsgs_text} pt ON pid=p.id AND text,title
-				WHERE userfrom={0} ORDER BY date DESC LIMIT 1", $loguserid));
+				WHERE userfrom={0} ORDER BY date DESC LIMIT 1", $loguser));
 			Alert(__("You're going too damn fast! Slow down a little."), __("Hold your horses."));
 		}
 	}
